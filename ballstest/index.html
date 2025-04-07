@@ -1,0 +1,58 @@
+<!--
+There are N buckets arranged in a row. Each bucket either is empty or contains a ball. The buckets are specified as a string buckets consisting of characters '.' (empty bucket) and 'B' (bucket with a ball). For example, "B.BB.B..B" 
+
+In one move you can take the ball out of any bucket and place it in another (empty) bucket. Your goal is to arrange the balls to create an alternating sequence of full and empty buckets. In other words, the distance between two consecutive balls should be equal to 2. Note that the sequence may start at any bucket.
+For example, in the figure below, the balls are placed correctly:
+"...B.B.B.."
+On the other hand, in both of the figures below, the balls are placed incorrectly:
+"..B..B..B."
+".B.B..B..."
+What is the minimum number of moves required to create a correct sequence of balls in buckets?
+-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Visualizador de B - Avanzado</title>
+
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+
+	<div class="container">
+
+  <h2>Visualizador de movimientos de B</h2>
+  <input id="inputStr" value="..B....B.BB" size="20" />
+  <button onclick="visualizar()">Visualizar</button>
+  <div id="resultado"></div>
+  <div id="output"></div>
+
+  <div id="controls">
+    <button onclick="prevStep()">⬅ Paso anterior</button>
+    <button onclick="togglePlay()" id="playBtn">▶️ Play</button>
+    <button onclick="nextStep()">Siguiente paso ➡</button>
+    <button onclick="verTodosLosPasos()">🧾 Ver todos los pasos</button>
+  </div>
+
+  <p id="stepInfo" class="step-info"></p>
+  <div id="allSteps"></div>
+  <h3>Historial de pruebas</h3>
+  <div id="history"></div>
+
+<script type="text/javascript" src="script.js"></script>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+
+</div>
+
+</body>
+</html>
